@@ -1,0 +1,19 @@
+Trying to create a list of items that will keep track of themselves. 
+
+This will be used to delete themselves if the x is pressed. The only thing is they need to know their 
+own information somehow. 
+
+When the button is clicked, it needs to use a function that is held in the parent and will remove the 
+entity depending on the uid passed in. Then it doesnt need to know its own value, but will pass
+it back up the parent and remove itself. This will remove any need to keep and list information in
+each component 
+
+Now that there is context involved. The first item should be prepared and Then
+it can be displayed by accessing the state directly. Hopefully this will
+help to make sure the first item will always render
+
+TODO 
+//DONE// 1. Create an initial list item so there will always be one item displayed
+//DONE// 2. Create function to add more list items as needed 
+//CURRENT// 3. Create function to remove a specific list item given its current uid to get the index 
+                and then remove it
