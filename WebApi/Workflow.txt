@@ -1,0 +1,38 @@
+﻿
+
+What should the general call flow look like?
+
+1. Begin by inputting member information and store Id
+	a. This will result in member being checked to be valid. This will require 
+		Patient name and DOB to make sure they are matching
+	b. Store Id will be queried to make sure that it is a valid store member 
+		And able to use the Assure api
+
+2. Once those are confirmed the user will be moved to the next menu that will 
+	ask for ingredients for the compound. 
+	a. At this point there will be an auto complete function for the inputs that will 
+		either query an already set up database of common ingredients to make things 
+		simpler for those who are typing in the compound
+	b. If an ingredient is an unknown it will be queried using the health-products api and 
+		added to the DB for faster look up times in the future 
+	c. Once all of the information has been added, and all the required fields have been 
+		inputted then there will be a call to the Backend API to inform if the compound
+		will be covered or not
+
+3. User will be moved to a new page where the confirmation will be displayed if something is covered or not.
+	a. This screen must include reference numbers for the pharmacy because they are still subject to audit 
+
+
+Problems 
+
+- Any ingredients being passed into the fields first need to be matched to an Ingredient. When the application is loaded 
+	the autofill values can also be loaded in the background, even though they are not currently going to be used in the first card
+	of the front end 
+
+- A passed in ingredient with null values is fine, but will have to be manually checked in the db, if not present in the db, then 
+	the canadian api can be queried to autopopulate the db when something new is passed in that is a known active ingredient
+
+- How should the back end be handled? If a new drug is being added and it is a powder, it will not have a din number, and therefore
+	will have to be searched via the name only. Therefore a name will be required for sure. Searching via the DIN should be done firstly
+	If no DIN is present, then use the name of the ingredient to query next. Realistically active ingredients is all that needs to be 
+	known. But it might be best to set up a DIN because it will be useful for their PDIN use in the end

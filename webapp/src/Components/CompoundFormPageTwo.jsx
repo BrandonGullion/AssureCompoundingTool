@@ -28,7 +28,8 @@ export default function CompoundFormPageTwo() {
     }, [ingredientArray]);
 
     return (
-        <div className="compounding-form-page-container">
+        <div className="compounding-form-page-container"
+        style={{position:"relative"}}>
             <label
                 style={{ position: "relative", left: "40px", width: "100%" }}
             >
@@ -120,13 +121,14 @@ export default function CompoundFormPageTwo() {
                     />
                 </div>
             </div>
-            <div style={{ position: "relative", top: "390px" }}>
+            <div>
                 <button
                     onClick={() => dispatch({
                         type: "TO_INTRO_SLIDE",
                         payload: -1,
                     })}
                     className="default-button back-button"
+                    style={{position:"absolute", left:"35px", bottom:"40px"}}
                 >
                     Back
                 </button>
@@ -136,6 +138,7 @@ export default function CompoundFormPageTwo() {
                         payload: 1,
                     })}
                     className="default-button next-button"
+                    style={{position:"absolute", right:"35px", bottom:"40px"}}
                 >
                     Next
                 </button>

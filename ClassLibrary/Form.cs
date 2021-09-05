@@ -1,8 +1,6 @@
-namespace ClassLibrary
+namespace Classes
 {
-    public class Form
+    public class Form : Entity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }

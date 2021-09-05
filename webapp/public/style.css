@@ -76,9 +76,6 @@ body{
     color: var(--input-dropshadow) !important;
     font-weight: bold;
     border-radius: 50px;
-    position: absolute;
-    bottom: 80px;
-    left: 50px;
     transition: 0.2s;
 }
 

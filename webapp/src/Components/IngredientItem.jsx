@@ -14,7 +14,8 @@ export default function IngredientItem(props) {
     const dispatch = useContext(AssureDispatchContext);
 
     useEffect(() => {
-        state.ingredientArray.length > 1
+        console.log("Checking button visibility")
+        state.ingredientArray.length >= 2
             ? setCloseButtonVisibility(true)
             : setCloseButtonVisibility(false);
     }, [state.ingredientArray]);

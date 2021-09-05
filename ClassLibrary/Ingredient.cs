@@ -1,9 +1,11 @@
-namespace ClassLibrary
+namespace Classes
 {
-    public class Ingredient
+    public class Ingredient : Entity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        
+        public int DIN { get; set; }
+        public string Strength { get; set; }
+        public double Quantity { get; set; }
+        public int UPC { get; set; }
+
     }
 }
