@@ -22,6 +22,12 @@ namespace Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Convert Enum to string
+            modelBuilder.Entity<Ingredient>().Property(i => i.IngredientType).HasConversion<string>();
+            modelBuilder.Entity<Member>().Property(m => m.MemberType).HasConversion<string>();
+        }
 
     }
 }
