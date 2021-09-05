@@ -79,6 +79,8 @@ namespace API.Controllers
         {
             var httpClient = new HttpClient();
 
+
+
             return BadRequest("Endpoint checkCoverage not configured");
         }
     }
