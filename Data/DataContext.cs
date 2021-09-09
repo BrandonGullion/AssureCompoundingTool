@@ -17,6 +17,7 @@ namespace Data
         public DbSet<Store> Stores { get; set; }
         public DbSet<Compound> Compounds { get; set; }
         public DbSet<Ingredient> InEligibleIngredients { get; set; }
+        public DbSet<Reference> References { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -26,8 +27,9 @@ namespace Data
         {
             // Convert Enum to string
             modelBuilder.Entity<Ingredient>().Property(i => i.IngredientType).HasConversion<string>();
+            modelBuilder.Entity<Ingredient>().Property(i => i.StrengthUnit).HasConversion<string>();
+
             modelBuilder.Entity<Member>().Property(m => m.MemberType).HasConversion<string>();
         }
-
     }
 }

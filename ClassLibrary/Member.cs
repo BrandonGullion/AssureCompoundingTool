@@ -18,7 +18,7 @@ namespace Classes
 
     public class Member : Entity
     {
-        public int MemberId { get; set; }
+        public string MemberId { get; set; }
         public MemberType MemberType { get; set; }
         public DateTime DOB { get; set; }
         public string FirstName { get; set; }

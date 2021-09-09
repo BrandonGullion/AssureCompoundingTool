@@ -7,7 +7,7 @@ namespace Classes.DTO
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DOB { get; set; }
-        public int MemberId { get; set; }
+        public string MemberId { get; set; }
         public MemberType MemberType { get; set; }
 
     }

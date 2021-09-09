@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Classes.HealthProductAPIClasses
 {
-    public class HealthProductIngredient
+    public class ActiveIngredientResponse
     {
         [JsonProperty("dosage_unit")]
         public string DosageUnit { get; set; }

@@ -11,5 +11,7 @@ namespace Classes.DTO
         public List<Ingredient> Ingredients { get; set; }
         public double TotalQuantity { get; set; }
         public int Repeats { get; set; }
+        public string StoreId { get; set; }
+        public string MemberId { get; set; }
     }
 }
